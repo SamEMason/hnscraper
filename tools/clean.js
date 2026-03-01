@@ -16,7 +16,7 @@ import { constants } from 'fs';
 const TARGETS = ['playwright-report', 'test-results'];
 
 /**
- * Deletes Playwright-generated output directories if they exist.
+ * Deletes script-generated output directories if they exist.
  *
  * @returns {Promise<void>}
  */
