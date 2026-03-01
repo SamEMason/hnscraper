@@ -64,13 +64,13 @@ describe('Post._parseTimestamp', () => {
     let hourTimestamp = '1 hour ago';
     let dayTimestamp = '4 days ago';
 
-    // Test hour timestamp
+    // Test second timestamp
     const { value: secondValue, unit: secondUnit } =
       Post._parseTimestamp(secondTimestamp);
     expect(secondValue).toBe(1);
     expect(secondUnit).toBe('second');
 
-    // Test hour timestamp
+    // Test minute timestamp
     const { value: minuteValue, unit: minuteUnit } =
       Post._parseTimestamp(minuteTimestamp);
     expect(minuteValue).toBe(27);
@@ -82,7 +82,7 @@ describe('Post._parseTimestamp', () => {
     expect(hourValue).toBe(1);
     expect(hourUnit).toBe('hour');
 
-    // Test hour timestamp
+    // Test day timestamp
     const { value: dayValue, unit: dayUnit } =
       Post._parseTimestamp(dayTimestamp);
     expect(dayValue).toBe(4);
