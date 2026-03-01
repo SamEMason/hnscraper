@@ -1,7 +1,7 @@
 /**
  * @project Hacker News Scraper
  * @author Samuel Mason
- * @file HNScraper.spec.js
+ * @file HNScraper.unit.spec.js
  * @description Unit tests for the HNScraper class, including post data validation.
  * @created 2026-02-27
  */

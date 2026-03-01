@@ -1,7 +1,7 @@
 /**
  * @project Hacker News Scraper
  * @author Samuel Mason
- * @file HNScraper.spec.js
+ * @file HNScraper.e2e.spec.js
  * @description E2E tests for the HNScraper class, including post scraping,
  *              pagination, duplicate handling, and chronological ordering.
  * @created 2026-02-27
