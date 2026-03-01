@@ -6,10 +6,10 @@
  *              parsing, date conversion, and utility methods.
  * @created 2026-02-27
  */
+import { describe } from 'node:test';
 import { expect, test } from '@playwright/test';
 
 import Post from '#src/models/Post.js';
-import { describe } from 'node:test';
 
 describe('Post._relativeDate', () => {
   test('creates correct date from valid timestamp argument', () => {

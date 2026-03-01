@@ -6,10 +6,10 @@
  *              table formatting, headings, and truncation behavior.
  * @created 2026-02-27
  */
+import { describe } from 'node:test';
 import { expect, test } from '@playwright/test';
 
 import ConsoleView from '#src/views/ConsoleView.js';
-import { describe } from 'node:test';
 
 describe('ConsoleView._truncate', () => {
   test('returns string unchanged if their length is below the max allowed', () => {
