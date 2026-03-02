@@ -15,7 +15,7 @@ import HNScraper from '#src/services/HNScraper.js';
  *
  * Responsibilities:
  *  - Initialize and run the HNScraper
- *  - Initialize the Console
+ *  - Initialize the Logger
  *  - Display headings, scripts, and scraped post data
  *  - Handle errors during scraping
  *
@@ -24,14 +24,16 @@ import HNScraper from '#src/services/HNScraper.js';
 export default async function main() {
   const logger = new Logger();
   const scraper = new HNScraper(Config.POST_QUANTITY);
+  logger.heading();
 
   try {
-    logger.heading();
-
     await scraper.init();
-    await scraper.scrape();
-    const posts = scraper.getPosts();
 
+    logger.log('Scraping initiated...');
+    await scraper.scrape();
+    logger.log('Scraping completed...\n');
+
+    const posts = scraper.getPosts();
     logger.renderData(posts);
   } catch (err) {
     console.error(`Error scraping Hacker News: ${err}`);
