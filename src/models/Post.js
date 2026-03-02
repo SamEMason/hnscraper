@@ -44,6 +44,9 @@ export default class Post {
   static _relativeDate(timestamp, baseTime) {
     const { value, unit } = Post._parseTimestamp(timestamp);
 
+    // Return date from `baseTime` for negative values, which would represent future timestamps
+    if (value < 1) return new Date(baseTime);
+
     switch (unit) {
       case 'second':
         return new Date(baseTime - value * Post._timeConversion['second']);
