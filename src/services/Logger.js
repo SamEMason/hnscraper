@@ -8,7 +8,7 @@
  * @created 2026-03-1
  */
 
-import Console from '#src/services/loggerComponents/Console.js';
+import Console from '#src/services/loggerAdapters/Console.js';
 
 /**
  * Central logging class for the Hacker News Scraper.
