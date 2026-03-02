@@ -18,6 +18,16 @@
  * @param {number} baseTime - Timestamp in ms used to compute absolute date.
  */
 export default class Post {
+  /**
+   * Mapping of time units to their equivalent in milliseconds.
+   *
+   * Used internally by `Post` to convert relative timestamps (e.g., "5 minutes ago")
+   * into absolute `Date` objects.
+   *
+   * @type {{second: number, minute: number, hour: number, day: number}}
+   * @private
+   * @static
+   */
   static _timeConversion = {
     second: 1000,
     minute: 60 * 1000,
