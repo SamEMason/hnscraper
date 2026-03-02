@@ -7,7 +7,7 @@
  */
 
 /**
- * Need JSDocs for this class
+ * Configuration class providing global static settings for the application.
  *
  * @class
  */
