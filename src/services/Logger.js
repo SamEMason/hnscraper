@@ -10,6 +10,7 @@
 
 import Config from '#src/services/Config.js';
 import Console from './loggerAdapters/Console.js';
+import JSONLogger from './loggerAdapters/JSONLogger';
 
 /**
  * Central logging class for the Hacker News Scraper.
@@ -22,6 +23,7 @@ import Console from './loggerAdapters/Console.js';
 export default class Logger {
   constructor() {
     this._console = Config.LOGGER_CONSOLE_ENABLED ? new Console() : null;
+    this._json = Config.LOGGER_JSON_ENABLED ? new JSONLogger() : null;
   }
 
   heading() {
@@ -31,6 +33,7 @@ export default class Logger {
 
   renderData(data) {
     this._console?.renderData(data);
+    this._json?.logData(data);
   }
 
   log(message) {
