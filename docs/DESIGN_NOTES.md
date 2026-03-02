@@ -14,7 +14,7 @@
 
   - `Logger` centralizes logging for all output types (console, JSON), allowing consistent message formatting and configurable logging.
 
-    - `ConsoleView` handles console output, separating display logic from scraping.
+    - `Console` handles console output, separating display logic from scraping.
 
     - `JSONLogger` writes output to a JSON file, allowing for persistent post data.
 
@@ -50,7 +50,7 @@
 
 5.  **Logging & Output Abstraction**
 
-    - `ConsoleView` handles project-specific console rendering.
+    - `Console` handles project-specific console rendering.
 
     - `Logger` unifies multiple outputs, enabling configurable logging to console or JSON file without changing scraper logic.
 

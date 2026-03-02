@@ -14,7 +14,7 @@ A Node.js scraper that retrieves the newest posts from [Hacker News](https://new
   - Timestamp
   - Date object representation
 - Flexible **logging system**:
-  - Console logging via `ConsoleView`
+  - Console logging via `Console`
   - Optional JSON output via `JSONLogger`
 - Includes **unit and E2E tests** for critical helpers and scraper logic.
 
@@ -37,7 +37,7 @@ A Node.js scraper that retrieves the newest posts from [Hacker News](https://new
 │ │ ├── HNScraper.e2e.spec.js # End-to-end tests for the scraper
 │ │ └── HNScraper.unit.spec.js # Unit tests for the HNScraper methods
 │ ├── Logger/
-│ │ └── ConsoleView.spec.js # Unit tests for console logging behavior
+│ │ └── Console.spec.js # Unit tests for console logging behavior
 │ └── Post.spec.js # Unit tests for Post class
 ├── tools/
 │ └── clean.js # Utility script to clean test reports
@@ -80,13 +80,13 @@ and cover:
 - Chronological order of posts.
 - No duplicate posts.
 - Validity of post timestamps.
-- Utility methods in `ConsoleView`, `Post`, and `HNScraper` classes.
+- Utility methods in `Console`, `Post`, and `HNScraper` classes.
 
 ## Code Notes
 
-- **Maintainability & Readability**: Core classes ( `HNScraper`, `Post`, `ConsoleView`) are structured for clear separation of concerns.
+- **Maintainability & Readability**: Core classes ( `HNScraper`, `Post`, `Console`) are structured for clear separation of concerns.
 - **Reliability**: Automated tests cover key functionality and data integrity.
 - **Extensibility**: Classes are designed to easily accommodate future features, such as new output formats or additional scraping targets.
 - **Design Philosophy:** Combines object-oriented design, modular file organization, JS documentation, and error handling to make the code clear, consistent, and easy to work with.
 - Posts are sorted in **reverse chronological order** (`newest first`) before being returned.
-- `ConsoleView` handles project-specific console rendering of posts, while `JSONLogger` provides optional structured output, keeping scraping logic independent of logging.
+- `Console` handles project-specific console rendering of posts, while `JSONLogger` provides optional structured output, keeping scraping logic independent of logging.
