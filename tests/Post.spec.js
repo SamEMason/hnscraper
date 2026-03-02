@@ -1,6 +1,6 @@
 /**
  * @project Hacker News Scraper
- * @author Samuel Mason
+ * @author Sam Mason
  * @file Post.spec.js
  * @description Unit tests for the Post class, including relative timestamp
  *              parsing, date conversion, and utility methods.

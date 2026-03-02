@@ -1,6 +1,6 @@
 /**
  * @project Hacker News Scraper
- * @author Samuel Mason
+ * @author Sam Mason
  * @file Console.spec.js
  * @description Unit tests for the Console class, testing console rendering,
  *              table formatting, headings, and truncation behavior.

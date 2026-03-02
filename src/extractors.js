@@ -1,6 +1,6 @@
 /**
  * @project Hacker News Scraper
- * @author Samuel Mason
+ * @author Sam Mason
  * @file extractors.js
  * @description Provides utility functions to extract post rank, anchor data (title and URL),
  *              and relative timestamps from Hacker News submission elements.

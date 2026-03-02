@@ -1,6 +1,6 @@
 /**
  * @project Hacker News Scraper
- * @author Samuel Mason
+ * @author Sam Mason
  * @file clean.js
  * @description Utility script for cleaning or resetting data directories,
  *              caches, or temporary files related to the project.

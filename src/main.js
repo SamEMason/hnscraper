@@ -1,6 +1,6 @@
 /**
  * @project Hacker News Scraper
- * @author Samuel Mason
+ * @author Sam Mason
  * @file main.js
  * @description Entry point module that instantiates the HNScraper and Console,
  *              runs the scraper, and renders post data to the console.

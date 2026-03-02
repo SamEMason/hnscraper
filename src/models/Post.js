@@ -1,6 +1,6 @@
 /**
  * @project Hacker News Scraper
- * @author Samuel Mason
+ * @author Sam Mason
  * @file Post.js
  * @description Defines the Post class representing a single Hacker News post,
  *              including methods for converting relative timestamps to absolute dates.

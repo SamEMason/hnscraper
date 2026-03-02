@@ -1,6 +1,6 @@
 /**
  * @project Hacker News Scraper
- * @author Samuel Mason
+ * @author Sam Mason
  * @file Console.js
  * @description Defines the Console class for rendering post data to the console,
  *              including formatted tables, headings, and script instructions.

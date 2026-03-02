@@ -1,6 +1,6 @@
 /**
  * @project Hacker News Scraper
- * @author Samuel Mason
+ * @author Sam Mason
  * @file Logger.js
  * @description Provides a centralized logging service for the application,
  *              coordinating multiple logging outputs (e.g., console, JSON)

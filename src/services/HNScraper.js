@@ -1,6 +1,6 @@
 /**
  * @project QA Wolf Hacker News Scraper
- * @author Samuel Mason
+ * @author Sam Mason
  * @file HNScraper.js
  * @description Defines the HNScraper class for scraping the newest posts from
  *              Hacker News, handling pagination, extraction, and post storage.
