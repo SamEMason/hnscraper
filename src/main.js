@@ -2,11 +2,11 @@
  * @project Hacker News Scraper
  * @author Samuel Mason
  * @file main.js
- * @description Entry point module that instantiates the HNScraper and ConsoleView,
+ * @description Entry point module that instantiates the HNScraper and Console,
  *              runs the scraper, and renders post data to the console.
  * @created 2026-02-27
  */
-import ConsoleView from '#src/views/ConsoleView.js';
+import Console from '#src/views/Console.js';
 import HNScraper from '#src/services/HNScraper.js';
 
 const POST_QUANTITY = 100;
@@ -16,7 +16,7 @@ const POST_QUANTITY = 100;
  *
  * Responsibilities:
  *  - Initialize and run the HNScraper
- *  - Initialize the ConsoleView
+ *  - Initialize the Console
  *  - Display headings, scripts, and scraped post data
  *  - Handle errors during scraping
  *
@@ -24,7 +24,7 @@ const POST_QUANTITY = 100;
  */
 export default async function main() {
   const scraper = new HNScraper(POST_QUANTITY);
-  const view = new ConsoleView();
+  const view = new Console();
 
   try {
     view.heading();
