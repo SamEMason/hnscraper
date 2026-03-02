@@ -7,7 +7,8 @@
  *              and handling formatting, truncation, and structured output.
  * @created 2026-03-1
  */
-import Console from '#src/services/logger/Console.js';
+
+import Console from '#src/services/loggerComponents/Console.js';
 
 /**
  * Central logging class for the Hacker News Scraper.
