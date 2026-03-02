@@ -6,7 +6,7 @@
  *              runs the scraper, and renders post data to the console.
  * @created 2026-02-27
  */
-import Console from '#src/services/logger/Console.js';
+import Logger from '#src/services/Logger.js';
 import HNScraper from '#src/services/HNScraper.js';
 
 const POST_QUANTITY = 100;
@@ -24,11 +24,11 @@ const POST_QUANTITY = 100;
  */
 export default async function main() {
   const scraper = new HNScraper(POST_QUANTITY);
-  const view = new Console();
+  const logger = new Logger();
 
   try {
-    view.heading();
-    view.scripts();
+    logger.console.heading();
+    logger.console.scripts();
 
     console.log('Scraper running...');
     await scraper.init();
@@ -36,7 +36,7 @@ export default async function main() {
     const posts = scraper.getPosts();
     console.log('Scraping completed...');
 
-    view.renderData(posts);
+    logger.console.renderData(posts);
   } catch (err) {
     console.error(`Error scraping Hacker News: ${err}`);
   }
