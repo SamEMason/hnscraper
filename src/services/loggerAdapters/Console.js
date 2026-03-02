@@ -51,7 +51,7 @@ export default class Console {
    * @param {import('#src/models/Post.js').default[]} posts - Array of Post objects.
    * @returns {void}
    */
-  renderData(posts) {
+  logData(posts) {
     console.log(`Number of posts scraped: ${posts.length}`);
     console.table(
       posts.map((post) => ({

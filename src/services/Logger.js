@@ -48,8 +48,8 @@ export default class Logger {
    * @param {Array|Object} data - Structured data to render.
    * @returns {void}
    */
-  renderData(data) {
-    this._console?.renderData(data);
+  logData(data) {
+    this._console?.logData(data);
     this._json?.logData(data);
   }
 

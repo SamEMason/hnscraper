@@ -34,7 +34,7 @@ export default async function main() {
     logger.log('Scraping completed...\n');
 
     const posts = scraper.getPosts();
-    logger.renderData(posts);
+    logger.logData(posts);
   } catch (err) {
     console.error(`Error scraping Hacker News: ${err}`);
   }
