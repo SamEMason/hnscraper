@@ -6,10 +6,9 @@
  *              runs the scraper, and renders post data to the console.
  * @created 2026-02-27
  */
+import Config from '#src/services/Config.js';
 import Logger from '#src/services/Logger.js';
 import HNScraper from '#src/services/HNScraper.js';
-
-const POST_QUANTITY = 100;
 
 /**
  * Main application entry point for the Hacker News Scraper.
@@ -23,8 +22,8 @@ const POST_QUANTITY = 100;
  * @returns {Promise<void>}
  */
 export default async function main() {
-  const scraper = new HNScraper(POST_QUANTITY);
   const logger = new Logger();
+  const scraper = new HNScraper(Config.POST_QUANTITY);
 
   try {
     logger.console.heading();

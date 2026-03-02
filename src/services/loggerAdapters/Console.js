@@ -16,7 +16,8 @@
  * @param {number} maxURLLength - Maximum length for displayed post URLs.
  */
 export default class Console {
-  constructor(maxTitleLength = 100, maxURLLength = 50) {
+  constructor(enabled, maxTitleLength = 100, maxURLLength = 50) {
+    this.enabled = enabled;
     this._maxTitleLength = maxTitleLength;
     this._maxURLLength = maxURLLength;
   }

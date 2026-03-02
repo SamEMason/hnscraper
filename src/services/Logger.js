@@ -8,7 +8,8 @@
  * @created 2026-03-1
  */
 
-import Console from '#src/services/loggerAdapters/Console.js';
+import Config from '#src/services/Config.js';
+import Console from './loggerAdapters/Console.js';
 
 /**
  * Central logging class for the Hacker News Scraper.
@@ -20,6 +21,6 @@ import Console from '#src/services/loggerAdapters/Console.js';
  */
 export default class Logger {
   constructor() {
-    this.console = new Console();
+    this.console = Config.LOGGER_CONSOLE_ENABLED ? new Console() : null;
   }
 }
