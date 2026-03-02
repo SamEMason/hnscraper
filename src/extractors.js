@@ -26,7 +26,7 @@ export const extractRank = async (submission) => {
  * @returns {Promise<{title: string, href: string}>} The post title and URL.
  */
 export const extractAnchorData = async (submission) => {
-  const anchor = await submission.locator('.title a').first();
+  const anchor = submission.locator('.title a').first();
   const title = (await anchor.textContent()).trim();
   const href = await anchor.getAttribute('href');
 
