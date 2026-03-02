@@ -26,16 +26,13 @@ export default async function main() {
   const scraper = new HNScraper(Config.POST_QUANTITY);
 
   try {
-    logger.console.heading();
-    logger.console.scripts();
+    logger.heading();
 
-    console.log('Scraper running...');
     await scraper.init();
     await scraper.scrape();
     const posts = scraper.getPosts();
-    console.log('Scraping completed...');
 
-    logger.console.renderData(posts);
+    logger.renderData(posts);
   } catch (err) {
     console.error(`Error scraping Hacker News: ${err}`);
   }

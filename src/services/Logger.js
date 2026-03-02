@@ -21,6 +21,21 @@ import Console from './loggerAdapters/Console.js';
  */
 export default class Logger {
   constructor() {
-    this.console = Config.LOGGER_CONSOLE_ENABLED ? new Console() : null;
+    this._console = Config.LOGGER_CONSOLE_ENABLED ? new Console() : null;
+  }
+
+  heading() {
+    this._console?.heading();
+    this._console?.scripts();
+  }
+
+  renderData(data) {
+    this._console?.renderData(data);
+  }
+
+  log(message) {
+    if (this._console) {
+      console.log(message);
+    }
   }
 }
