@@ -29,7 +29,7 @@ A Node.js scraper that retrieves the newest posts from [Hacker News](https://new
 │ │ ├── loggerAdapters/ # Logger adapters (Console, JSON)
 │ │ ├── HNScraper.js # Scraper class for Hacker News posts
 │ │ └── Logger.js # Centralized logging service
-│ ├── Config.js # NEEDS DESCRIPTION
+│ ├── Config.js # Configuration class for the Hacker News Scraper
 │ ├── extractors.js # Helper functions to extract rank, title, URL, timestamp
 │ └── main.js # Entry point to run the scraper
 ├── tests/
