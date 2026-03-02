@@ -57,7 +57,7 @@ export default class HNScraper {
    */
   async scrape() {
     const logger = new Logger();
-    logger.log('Scraper running...');
+
     // `baseTime` used to determine `Date` value from relative timestamp
     const baseTime = Date.now();
 
@@ -84,7 +84,6 @@ export default class HNScraper {
     } finally {
       // Explicitly close the browser
       await this._browser?.close();
-      logger.log('Scraping completed...\n');
     }
 
     // Return an array of `postQuantity` newest posts
