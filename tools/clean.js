@@ -8,12 +8,13 @@
  */
 import { access, rm } from 'fs/promises';
 import { constants } from 'fs';
+import Config from '#src/Config.js';
 
 /**
  * List of directories to remove during cleanup.
  * @type {string[]}
  */
-const TARGETS = ['playwright-report', 'test-results'];
+const TARGETS = Config.CLEAN_TARGETS;
 
 /**
  * Deletes script-generated output directories if they exist.
