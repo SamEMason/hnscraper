@@ -13,6 +13,7 @@
  */
 export default class Config {
   static LOGGER_CONSOLE_ENABLED = true;
-  static LOGGER_JSON_ENABLED = false;
+  static LOGGER_JSON_ENABLED = true;
+  static LOGGER_JSON_FILEPATH = 'logs/posts.json';
   static POST_QUANTITY = 100;
 }
