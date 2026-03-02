@@ -7,6 +7,8 @@
  * @created 2026-02-27
  */
 
+import Config from '#src/Config.js';
+
 /**
  * Console-based view for displaying scraper output.
  *
@@ -57,7 +59,12 @@ export default class Console {
       posts.map((post) => ({
         Rank: post.rank,
         Title: Console._truncate(post.title, this._maxTitleLength),
-        URL: Console._truncate(post.href, this._maxURLLength),
+
+        // Display URLs when config is enabled
+        ...(Config.LOGGER_CONSOLE_DISPLAY_URLS && {
+          URL: Console._truncate(post.href, this._maxURLLength),
+        }),
+
         Timestamp: post.timestamp,
         Date: post.date.toLocaleString(),
       }))
