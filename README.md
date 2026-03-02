@@ -1,6 +1,6 @@
 # Hacker News Scraper
 
-A Node.js scraper that retrieves the newest posts from [Hacker News](https://news.ycombinator.com/newest), displays posts in a formatted console table, and includes automated tests for data integrity and chronological ordering.
+A Node.js scraper that retrieves the newest posts from [Hacker News](https://news.ycombinator.com/newest), displays posts in a formatted console table, optionally logs them to JSON, and includes automated tests for data integrity and chronological ordering.
 
 ## Features
 
@@ -13,6 +13,9 @@ A Node.js scraper that retrieves the newest posts from [Hacker News](https://new
   - URL (truncated for readability)
   - Timestamp
   - Date object representation
+- Flexible **logging system**:
+  - Console logging via `ConsoleView`
+  - Optional JSON output via `JSONLogger`
 - Includes **unit and E2E tests** for critical helpers and scraper logic.
 
 ## Project Structure
@@ -23,16 +26,19 @@ A Node.js scraper that retrieves the newest posts from [Hacker News](https://new
 │ ├── models/
 │ │ └── Post.js # Post class representing a Hacker News post
 │ ├── services/
-│ │ └── HNScraper.js # Scraper class for Hacker News posts
-│ ├── views/
-│ │ └── ConsoleView.js # Handles console output formatting
+│ │ ├── loggerAdapters/ # Logger adapters (Console, JSON)
+│ │ ├── HNScraper.js # Scraper class for Hacker News posts
+│ │ └── Logger.js # Centralized logging service
+│ ├── Config.js # NEEDS DESCRIPTION
 │ ├── extractors.js # Helper functions to extract rank, title, URL, timestamp
-
 │ └── main.js # Entry point to run the scraper
 ├── tests/
-│ ├── ConsoleView.spec.js
-│ ├── HNScraper.spec.js
-│ └── Post.spec.js
+│ ├──HNScraper/
+│ │ ├── HNScraper.e2e.spec.js # End-to-end tests for the scraper
+│ │ └── HNScraper.unit.spec.js # Unit tests for the HNScraper methods
+│ ├── Logger/
+│ │ └── ConsoleView.spec.js # Unit tests for console logging behavior
+│ └── Post.spec.js # Unit tests for Post class
 ├── tools/
 │ └── clean.js # Utility script to clean test reports
 ├── .gitignore
@@ -61,6 +67,8 @@ npm start
 
 ```
 npm run test
+
+5. Optional JSON logging is enabled via configuration in `Config.js`.
 ```
 
 ## Tests
@@ -81,4 +89,4 @@ and cover:
 - **Extensibility**: Classes are designed to easily accommodate future features, such as new output formats or additional scraping targets.
 - **Design Philosophy:** Combines object-oriented design, modular file organization, JS documentation, and error handling to make the code clear, consistent, and easy to work with.
 - Posts are sorted in **reverse chronological order** (`newest first`) before being returned.
-- `ConsoleView` handles project-specific console rendering of posts, keeping scraping logic separate.
+- `ConsoleView` handles project-specific console rendering of posts, while `JSONLogger` provides optional structured output, keeping scraping logic independent of logging.
