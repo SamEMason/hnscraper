@@ -9,7 +9,7 @@
 import { describe } from 'node:test';
 import { expect, test } from '@playwright/test';
 
-import Console from '#src/views/Console.js';
+import Console from '#src/services/logger/Console.js';
 
 describe('Console._truncate', () => {
   test('returns string unchanged if their length is below the max allowed', () => {

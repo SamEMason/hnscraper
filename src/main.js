@@ -6,7 +6,7 @@
  *              runs the scraper, and renders post data to the console.
  * @created 2026-02-27
  */
-import Console from '#src/views/Console.js';
+import Console from '#src/services/logger/Console.js';
 import HNScraper from '#src/services/HNScraper.js';
 
 const POST_QUANTITY = 100;
