@@ -27,7 +27,7 @@ test.beforeAll(async () => {
 
 describe('HNScraper.scrape', () => {
   test('retrieves posts in chronological order', () => {
-    // Iteratively check that previous post's dates are older than the current
+    // Iteratively check that previous post's dates are newer than the current
     for (let i = 1; i < scraper.postQuantity; i++) {
       const { date: prevDate, rank: prevRank } = posts[i - 1];
       const { date: currDate, rank: currRank } = posts[i];
